@@ -1,0 +1,11 @@
+/*
+=====================================================================================================
+CREATE A DATABASE
+=====================================================================================================
+*/
+
+--Drop the database if it exist to start from scratch
+DROP DATABASE IF EXISTS DataWarehouse ;
+
+--Create data warehouse
+CREATE DATABASE DataWarehouse;
