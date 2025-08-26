@@ -1,0 +1,11 @@
+/*
+=======================================================================================
+CREATE SCHEMAS
+=======================================================================================
+*/
+-- Create bronze, silver and gold schemas
+CREATE SCHEMA gold;
+
+CREATE SCHEMA silver;
+
+CREATE SCHEMA bronze;
