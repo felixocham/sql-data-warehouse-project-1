@@ -6,7 +6,7 @@ It consists of **dimension tables** and **fact tables** for specific business me
 
 ---
 
-### gold.dim_customers
+### 1. **gold.dim_customers**
 - **Purpose:** Stores customers' details enriched with demographic and geographic data
 - **columns:**
   
@@ -24,3 +24,20 @@ It consists of **dimension tables** and **fact tables** for specific business me
 | create_date            | DATE               |The date and time when the customer record was created in the system                   |
 
 ---
+
+### 2. **gold.dim_products**
+- **purpose:** Provide information about the products and their attributes.
+- **Columns**
+
+  | Column Name| Data Type | Description |
+  |------------|-----------|-------------|
+  | product_key| INT |Surrogate key uniquely identifying each product record in the product dimension table |
+  | product_id| INT| A unique identifier assigned to the product for internal tracking and referencing|
+  | product_number| NVARCHAR(50)| A structured alphanumeric code representing the product, often used for categorisation and inventory|
+  | product_name |NVARCHAR(50)|Descriptive name of the product, including key details such as type, colour and size.|
+  | category_id|NVARCHAR(50)| A unique identifier for the products category |
+  | category|NVARCHAR(50)||
+  | subcategory|NVARCHAR(50)||
+  | maintenance|NVARCHAR(50)||
+  | product_line|NVARCHAR(50)||
+  | create_date| DATE||
