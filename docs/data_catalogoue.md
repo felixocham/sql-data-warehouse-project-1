@@ -9,6 +9,7 @@ It consists of **dimension tables** and **fact tables** for specific business me
 ### gold.dim_customers
 - **Purpose:** Stores customers' details enriched with demographic and geographic data
 - **columns:**
+  
 | Column Name            | Data Type          | Description                                                                           |
 | -----------------------|--------------------|---------------------------------------------------------------------------------------|
 | customer_key           | INT                | Surrogate key uniquely identifies each customer record in the dimension table         |
