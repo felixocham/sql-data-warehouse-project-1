@@ -27,36 +27,36 @@ It consists of **dimension tables** and **fact tables** for specific business me
 
 ### 2. **gold.dim_products**
 - **purpose:** Provide information about the products and their attributes.
-- **Columns**
+- **columns:**
 
-  | Column Name   | Data Type   | Description                                                                                          |
-  |---------------|-------------|------------------------------------------------------------------------------------------------------|
-  | product_key   | INT         | Surrogate key uniquely identifying each product record in the product dimension table.               |
-  | product_id    | INT         | A unique identifier assigned to the product for internal tracking and referencing.                   |
-  | product_number| NVARCHAR(50)| A structured alphanumeric code representing the product, often used for categorisation and inventory.|
-  | product_name  | NVARCHAR(50)| Descriptive name of the product, including key details such as type, colour and size.                |
-  | category_id   | NVARCHAR(50)| A unique identifier for the products category                                                        |
-  | category      | NVARCHAR(50)| The broader classifcation of the product(e.g. 'bikes', 'components').                                |
-  | subcategory   | NVARCHAR(50)| A more detailed classification of the prodct within the categor, such as the product type.           |
-  | maintenance   | NVARCHAR(50)| Indicates whether the product requires maintenance (e.g. 'Yes', ''No).                               |
-  | product_line  | NVARCHAR(50)| The specific product line or series to which the product belongs (e.g. 'Road', 'Touring').           |
-  | start_date    | DATE        | The date when the product became available for sale or use, stored in.                               |
+| Column Name   | Data Type   | Description                                                                                          |
+|---------------|-------------|------------------------------------------------------------------------------------------------------|
+| product_key   | INT         | Surrogate key uniquely identifying each product record in the product dimension table.               |
+| product_id    | INT         | A unique identifier assigned to the product for internal tracking and referencing.                   |
+| product_number| NVARCHAR(50)| A structured alphanumeric code representing the product, often used for categorisation and inventory.|
+| product_name  | NVARCHAR(50)| Descriptive name of the product, including key details such as type, colour and size.                |
+| category_id   | NVARCHAR(50)| A unique identifier for the products category                                                        |
+| category      | NVARCHAR(50)| The broader classifcation of the product(e.g. 'bikes', 'components').                                |
+| subcategory   | NVARCHAR(50)| A more detailed classification of the prodct within the categor, such as the product type.           |
+| maintenance   | NVARCHAR(50)| Indicates whether the product requires maintenance (e.g. 'Yes', ''No).                               |
+| product_line  | NVARCHAR(50)| The specific product line or series to which the product belongs (e.g. 'Road', 'Touring').           |
+| start_date    | DATE        | The date when the product became available for sale or use, stored in.                               |
 
 
   ### 3. **gold.fact_sales**
   - **purpose:** Stores transactional sales data for analytical purposes.
-  - **Columns:**
+  - **columns:**
  
-    | Column Name   | Data Type     | Description                                                            |
-    |---------------|---------------|------------------------------------------------------------------------|
-    | order_number  | NVARCHAT(50)  | A unique alphanumeric identifier for each sales order (e.g., 'S054496')|
-    | product_key   | INT           | Surrogate key linking the order to the product dimension table.        |
-    | customer_key  | INT           | Surrogate key linking the order to the customer dimension table.       |
-    | order_date    | DATE          | The date when the order was placed.                                    |
-    | due_date      | DATE          | The date when the order was payment was due.                           |
-    | shipping_date | DATE          | The date when the order was shipped to the customer.                   |
-    | sales_amount  | DECIMAL(10,2) | The total monetary value if the sale for the line item (e.g. 25.22)    |
-    | quantity      | INT           | The number of units of the product ordered for the line item (e.g., 1) |
-    | price         | DECIMAL(10,2) | The price per unit of the product fir the line item (e.g., 25.20)      |
+| Column Name   | Data Type     | Description                                                            |
+|---------------|---------------|------------------------------------------------------------------------|
+| order_number  | NVARCHAT(50)  | A unique alphanumeric identifier for each sales order (e.g., 'S054496')|
+| product_key   | INT           | Surrogate key linking the order to the product dimension table.        |
+| customer_key  | INT           | Surrogate key linking the order to the customer dimension table.       |
+| order_date    | DATE          | The date when the order was placed.                                    |
+| due_date      | DATE          | The date when the order was payment was due.                           |
+| shipping_date | DATE          | The date when the order was shipped to the customer.                   |
+| sales_amount  | DECIMAL(10,2) | The total monetary value if the sale for the line item (e.g. 25.22)    |
+| quantity      | INT           | The number of units of the product ordered for the line item (e.g., 1) |
+| price         | DECIMAL(10,2) | The price per unit of the product fir the line item (e.g., 25.20)      |
 
     
