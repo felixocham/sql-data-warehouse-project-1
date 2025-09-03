@@ -42,6 +42,7 @@ It consists of **dimension tables** and **fact tables** for specific business me
 | product_line  | NVARCHAR(50)| The specific product line or series to which the product belongs (e.g. 'Road', 'Touring').           |
 | start_date    | DATE        | The date when the product became available for sale or use, stored in.                               |
 
+---
 
   ### 3. **gold.fact_sales**
   - **purpose:** Stores transactional sales data for analytical purposes.
@@ -59,4 +60,4 @@ It consists of **dimension tables** and **fact tables** for specific business me
 | quantity      | INT           | The number of units of the product ordered for the line item (e.g., 1) |
 | price         | DECIMAL(10,2) | The price per unit of the product fir the line item (e.g., 25.20)      |
 
-    
+---    
